@@ -74,7 +74,7 @@ void setup() {
 void loop() {
   // Nếu đang trong thời gian cảnh báo sạt lở thì dừng đo và kiểm tra thời gian
   if (canhBaoSatLo) {
-    // Nếu đã qua 5 giây, tắt còi và tiếp tục hoạt động bình thường
+    // Nếu đã qua 3 giây, tắt còi và tiếp tục hoạt động bình thường
     if (millis() - thoiGianCanhBao >= 3000) {
       digitalWrite(BUZZER_PIN, LOW);
       digitalWrite(LED_PIN, LOW);
