@@ -102,6 +102,9 @@ void loop() {
   Firebase.setFloat(fbdo, "/sensor_data/do_am_dat", doam_percent);
   Firebase.setInt(fbdo, "/sensor_data/mua", (mua == LOW ? 1 : 0));
   Firebase.setInt(fbdo, "/sensor_data/rung", rung);
+  Firebase.setInt(fbdo, "/canh_bao", 0);
+  Firebase.setInt(fbdo, "/thiet_bi/loa", 0);
+  Firebase.setInt(fbdo, "/thiet_bi/den", 0);
 
   // Phát hiện sạt lở: Độ ẩm cao + có mưa + có rung
   if (doam_percent > 70 && mua == LOW && rung == HIGH) {
